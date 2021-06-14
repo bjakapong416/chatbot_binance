@@ -23,9 +23,6 @@ import json
 import subprocess
 
 
-import getPrice
-
-
 
 app = Flask(__name__)
 
@@ -43,6 +40,7 @@ def webhook():
         
         message = message.upper()
         cmd1 = f'python getData_binance.py {message}'
+
 
         # Using os.system() method
         os.system(cmd1)
